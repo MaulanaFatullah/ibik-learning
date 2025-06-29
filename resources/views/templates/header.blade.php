@@ -30,8 +30,7 @@
                 @guest
                 @if (Route::has('login'))
                 <li class="nav-item ms-3">
-                    <a class="btn btn-outline-light rounded-pill px-3" href="{{ route('login')
-}}">
+                    <a class="btn btn-outline-light rounded-pill px-3" href="{{ route('login') }}">
                         Login
                     </a>
                 </li>

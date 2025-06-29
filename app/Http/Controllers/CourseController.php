@@ -3,17 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-    use App\Models\Course;//+
-    use App\Models\Storage;//+
+use App\Models\Course;
+use Illuminate\Support\Facades\Storage;
 
 class CourseController extends Controller
 {
     //
-    public function showForUser()
+public function showForUser()
     {
         $courses = Course::latest()->take(3)->get();
         $categories = $courses->pluck('category')->unique()->sort()->values();
-        return view('users.home', compact('courses', 'categories'));
+        return view('user.home', compact('courses', 'categories'));
     }
     public function list(Request $request)
     {

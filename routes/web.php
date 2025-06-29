@@ -12,7 +12,7 @@ Route::get('/home', [CourseController::class, 'showForUser'])->name('user.home')
 // Katalog Kursus
 Route::get('/product', [CourseController::class, 'list'])->name('courses.list');
 // Profil Tampilan (non-login)
-Route::get('/profile', fn() => view('users.profile'))->name('user.profile');
+Route::get('/profile', fn() => view('user.profile'))->name('user.profile');
 // =======================
 // Auth-Protected Routes
 // =======================

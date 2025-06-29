@@ -2,16 +2,14 @@
 @section('content')
 {{-- Code Pengambilan Data Dummy --}}
 @php
-<!-- $data = include resource_path('data/dummy.php'); -->
+// $data = include resource_path('data/dummy.php');
+$data = include resource_path('data/dummy.php');
 $instructors = $data['instructors'];
 $testimonials = $data['testimonials'];
 @endphp
-<div
-    style="background-color: var(--bg-main); color: var(--text-light);">
+<div style="background-color: var(--bg-main); color: var(--text-light);">
     {{-- Code PerSection --}}
-    <section
-        class="py-5"
-        style="background-color: #0F193E;">
+    <section class="py-5" style="background-color: #0F193E;">
         <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-md-6 text-center text-md-start">
@@ -41,18 +39,13 @@ $testimonials = $data['testimonials'];
             </div>
         </div>
     </section>
-    <section
-        style="background-color: #1F2281;">
-        <div
-            class="container">
-            <div
-                class="d-flex align-items-center justify-content-between px-4 py-3
-rounded-3">
+    <section style="background-color: #1F2281;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between px-4 py-3 rounded-3">
                 <span class="fw-semibold small text-light">
                     Our Course Partners :
                 </span>
-                <div class="d-flex align-items-center gap-4 flex-wrap
-justify-content-center flex-grow-1">
+                <div class="d-flex align-items-center gap-4 flex-wrap justify-content-center flex-grow-1">
                     <img
                         src="{{ asset('assets/images/patner-02.png') }}"
                         alt="partner"
